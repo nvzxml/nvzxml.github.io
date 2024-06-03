@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.img.jpeg" alt="LOGO">
+            <p>@nanda_3052</p>
+        </header>
+        
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Our Values</a>
+            <a href="#">State of the Industry</a>
+            <a href="#">Places We Work</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="content">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#" data-content="biography">Biography</a></li>
+                    <li><a href="#" data-content="our-office">Our Office</a></li>
+                    <li><a href="#" data-content="our-founder">Our Founder</a></li>
+                    <li><a href="#" data-content="referrals">Referrals</a></li>
+                    <li><a href="#" data-content="forms">Forms</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div id="biography" class="content-section">
+                    <h2>Biography</h2>
+                    <p>Here is the biography content...</p>
+                </div>
+                <div id="our-office" class="content-section" style="display: none;">
+                    <h2>Our Office</h2>
+                    <p>Here is the our office content...</p>
+                </div>
+                <div id="our-founder" class="content-section" style="display: none;">
+                    <h2>Our Founder</h2>
+                    <div class="founder-content">
+                        <div class="text">
+                            <p>Nanda Wahyu lahir dan dibesarkan di Tanjung Jabung Timur, Jambi. Dia adalah seorang mahasiswa yang bersemangat dan tekun dalam mengejar pendidikannya. Nanda menempuh pendidikan dasarnya di SDN 220 Tanjung Jabung Timur, tempat di mana minatnya dalam belajar mulai tumbuh. Semangatnya dalam mengejar ilmu terus berkembang ketika dia melanjutkan pendidikan menengahnya di SMPN 19 Tanjung Jabung Timur.
+                                
+                                Di SMP, Nanda terlibat dalam berbagai kegiatan ekstrakurikuler dan menjadi salah satu siswa yang dikenal karena keuletannya dalam menyelesaikan tugas-tugas sekolah. Kecintaannya terhadap ilmu semakin memantiknya untuk terus berprestasi. Setelah menyelesaikan pendidikan menengah, Nanda melanjutkan pendidikan ke tingkat yang lebih tinggi di SMKN 2 Kota Jambi. Di SMK, Nanda menunjukkan minat khusus dalam bidang tertentu dan aktif dalam kegiatan di luar kelas.
+                                
+                                Saat ini, Nanda Wahyu sedang menempuh pendidikan di UIN STS Jambi. Di perguruan tinggi, dia terus mengejar mimpi dan berusaha untuk menjadi pribadi yang lebih baik. Selain fokus pada pendidikan, Nanda juga terlibat dalam berbagai kegiatan organisasi atau kegiatan sosial yang membantu memperluas wawasannya dan meningkatkan keterampilan kepemimpinannya.
+                                
+                                Melalui perjalanan pendidikannya dan keterlibatannya dalam berbagai kegiatan, Nanda Wahyu bertekad untuk mencapai kesuksesan dan memberikan kontribusi positif bagi masyarakat dan lingkungan sekitarnya. Dia adalah contoh nyata dari semangat dan dedikasi dalam mengejar cita-cita, serta menjadi inspirasi bagi banyak orang di sekitarnya.</p>
+                            <p></p>
+                        </div>
+                        <div class="images">
+                            <img src="nandaaa.img.jpeg" alt="Image 1">
+                            <img src="nandaaa3.img.jpeg" alt="Image 2">
+                        </div>
+                    </div>
+                </div>
+                <div id="referrals" class="content-section" style="display: none;">
+                    <h2>Referrals</h2>
+                    <p>Here is the referrals content...</p>
+                </div>
+                <div id="forms" class="content-section" style="display: none;">
+                    <h2>Forms</h2>
+                    <p>Here is the forms content...</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Clear Glass. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const links = document.querySelectorAll('.sidebar a');
+        const sections = document.querySelectorAll('.content-section');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-content');
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
